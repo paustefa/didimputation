@@ -165,7 +165,7 @@ did_imputation <- function(data, yname, gname, tname, idname,
     se = "standard",
     data[zz000treat == 0, ],
     weights = ~zz000weight,
-    warn = FALSE, notes = FALSE
+    warn = FALSE, notes = FALSE, combine.quick = F
   )
 
   if(inherits(first_stage_est, "fixest_multi")) {
