@@ -281,7 +281,7 @@ did_imputation <- function(data, yname, gname, tname, idname,
 
     pre_est <- fixest::feols(
       pre_formula, data[data$zz000treat == 0, ],
-      weights = ~zz000weight, warn = FALSE, notes = FALSE
+      weights = ~zz000weight, warn = FALSE, notes = FALSE, cluster=cluster_var
     )
   }
 
